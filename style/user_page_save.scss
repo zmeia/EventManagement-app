@@ -1,0 +1,85 @@
+@import "fonts.scss";
+body{
+    background-image: url(../Resources/BackGrounds/pagina_utilizator.png);
+    background-size: 100vw 100vh;
+    margin: 0;
+    font-family: "Mango";
+    padding: 0;
+    overflow: hidden;
+}
+header{
+    width: 100vw;
+    height: 13vh;
+    padding-left:1vw ;
+    .logo{
+        position: relative;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 2em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        -webkit-transition: 0.6s;
+        transition: 0.6s;
+        p{
+            margin-left: 7vw;
+            margin-top: 4vw;
+            font-size: 52px;
+            font-weight: 100;
+            font-family: "Bilqo";
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+}
+.container{
+    display: flex;
+
+    .profile{
+    width: 40vw;
+    padding-left:1.5vw ;
+
+        .manage_profile{
+            display: flex;
+            flex-direction: column;
+            margin-left: 8vw;
+            font-family: "Mango";
+            a{
+                text-decoration: none;
+                opacity: 0.5;
+                color: black;
+                font-weight: bold;
+                font-size: 52px;
+                margin-top: -1.5vh;
+                padding: 0;
+            }
+            #save{
+                opacity: 1;
+            }
+            h1{
+                margin-top: -4vh;
+                font-weight: bold;
+                font-size: 62px;
+                margin-bottom: 2vh;
+            }
+        }
+    }
+    .saves{
+        width: 58%;
+        margin-left: -4vw;
+        small{
+            font-size: 4em;
+        }
+        .button{
+            display: inline;
+            cursor: pointer;
+        }
+    }
+    
+}
+.photo{
+    margin-top: -0.5vh;
+    padding-left: 5.5vw;
+}
+

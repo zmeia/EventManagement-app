@@ -1,6 +1,11 @@
 
+var box = document.querySelector(".box");
 
-window.addEventListener("scroll",function(){
-    var header = this.document.querySelector("header");
-    header.classList.toggle("sticky" , window.scrollY > 0);
+console.log(box.scrollTop);
+
+box.addEventListener("scroll",function(){
+    var header = window.document.querySelector("header");
+    header.classList.toggle("sticky" , box.scrollTop > 10);
+    
+    console.log(box.scrollTop);
 })

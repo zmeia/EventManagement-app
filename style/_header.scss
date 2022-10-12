@@ -1,36 +1,42 @@
+@import "fonts";
+
 header{
-    position: fixed;
+    position: absolute; 
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: 0.6s;
-    padding: 40px 100px;
+    padding: 2vh 8vw 0vh 8vw;
     z-index: 10;
+    background-color: rgba(0, 0, 0, 0.1);
     &.sticky{
-        padding: 20px 100px;
-        background: #fff;
+        padding: 4vh 8vw;
+        background-color: rgb(0,0 ,0,.1 );
+        height: 9vh;
         ul li a{
-            color: #000; 
+            color: #DDD3CA; 
         }
         
         .logo{
-            color: #000;
+            color: #DDD3CA;
         }
     }
     .logo{
+        font-family: "Bilqo";
         position: relative;
-        font-weight: 700;
-        color: #FFF;
+        font-weight: normal;
+        color: #DDD3CA;
         text-decoration: none;
-        font-size: 2em; 
+        font-size: 3em; 
         text-transform: uppercase;
         letter-spacing: 2px;
         transition: 0.6s;  
     }
     ul{
+        
         position: relative;
         display: flex;
         justify-content: center;
@@ -39,12 +45,14 @@ header{
             position: relative;
             list-style: none;
             a{
+                font-size: 26px;
+                font-family: "Mango";
+                font-weight: bold;
                 position: relative;
                 margin: 0 15px;
                 text-decoration: none;
-                color: #fff;
+                color: #DDD3CA;
                 letter-spacing: 2px;
-                font-weight: 500px; 
                 transition: 0.6s;
             }
         }
@@ -54,6 +62,6 @@ header{
 
 .banner{
     position: relative;
-    width: 100%;
-    height: 13vh;
+    width: 100vw;
+    height: 0vh;//?
 }

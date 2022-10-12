@@ -1,30 +1,66 @@
+@font-face {
+  font-family: "Mango";
+  src: url(../Resources/Fonts/Mango.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Bilqo";
+  src: url(../Resources/Fonts/Billqo.otf) format("truetype");
+}
 .container {
+  position: relative;
+  margin-top: -13vh;
   display: grid;
-  grid-template-columns: repeat(7, 13.98%);
+  grid-template-columns: repeat(7, 11vw);
   grid-template-rows: repeat(7, 10vh);
-  grid-gap: 7px;
+  grid-gap: 0.5vw;
   align-content: center;
   margin-left: 10vw;
   margin-right: 10vw;
 }
 .container div {
+  color: white;
+  font-family: "Mango";
+  font-size: 26px;
   background: #eee;
   padding: 1em;
   text-align: center;
   position: relative;
+  border-width: 5px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  background-image: radial-gradient(circle at 57% 36%, rgba(199, 199, 199, 0.04) 0%, rgba(199, 199, 199, 0.04) 10%, transparent 10%, transparent 100%), radial-gradient(circle at 22% 61%, rgba(199, 199, 199, 0.04) 0%, rgba(199, 199, 199, 0.04) 36%, transparent 36%, transparent 100%), radial-gradient(circle at 68% 97%, rgba(199, 199, 199, 0.04) 0%, rgba(199, 199, 199, 0.04) 41%, transparent 41%, transparent 100%), radial-gradient(circle at 57% 89%, rgba(199, 199, 199, 0.04) 0%, rgba(199, 199, 199, 0.04) 30%, transparent 30%, transparent 100%), radial-gradient(circle at 39% 80%, rgba(199, 199, 199, 0.04) 0%, rgba(199, 199, 199, 0.04) 22%, transparent 22%, transparent 100%), radial-gradient(circle at 88% 71%, rgba(199, 199, 199, 0.04) 0%, rgba(199, 199, 199, 0.04) 30%, transparent 30%, transparent 100%), linear-gradient(0deg, white, white);
+  border: 0.1px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+}
+.container .Calendar_Day {
+  border-width: 0;
+  margin-top: 0.4em;
+  font-size: 2em;
+}
+.container .event::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  transform: translate(50%, -50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: black;
 }
 
 .slider {
+  padding-top: 10vh;
   display: flex;
   justify-content: space-between;
   margin-left: 10vw;
   margin-right: 10vw;
   align-items: center;
+}
+
+.slider {
+  font-family: "Times New Roman", Times, serif;
 }
 
 .Month {
@@ -33,78 +69,90 @@
   margin-left: 20px;
   margin-right: 20px;
   border: none;
-  background-color: burlywood;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3;
+  color: white;
+  cursor: default;
 }
-.Month.Prev {
-  box-sizing: content-box;
-  font-size: 1rem;
+.Month p {
+  font-family: "Bilqo";
+  font-size: 28px;
+  font-weight: 100;
 }
-.Month.Prev p {
-  position: relative;
-  z-index: 2;
-}
-.Month.Curent {
-  box-sizing: content-box;
-  font-size: 1rem;
-}
-.Month.Curent p {
-  position: relative;
-  z-index: 2;
-}
-.Month.Next {
-  box-sizing: content-box;
-  font-size: 1rem;
-}
-.Month.Next p {
-  position: relative;
-  z-index: 2;
-}
-.Month :hover:after {
-  width: 100%;
-}
-.Month :after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: orangered;
-  transition: all 0.3s;
-  border-radius: 4px;
+.Month :hover {
+  text-decoration: underline;
 }
 
+.Prev, .Next {
+  color: #DDD3CA;
+  opacity: 0.8;
+}
+
+.Curent {
+  display: flex;
+}
+.Curent div {
+  padding: 5px;
+}
+.Curent p {
+  font-size: 32px;
+  margin-top: 6px;
+}
+
+.SvgBanner {
+  position: relative;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.SvgBanner svg {
+  fill: transparent;
+  stroke: white;
+  stroke-width: 2;
+  opacity: 1;
+}
+
+.BoxItem1 {
+  width: 100vw;
+  height: 100vh;
+}
+
+@font-face {
+  font-family: "Mango";
+  src: url(../Resources/Fonts/Mango.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Bilqo";
+  src: url(../Resources/Fonts/Billqo.otf) format("truetype");
+}
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: 0.6s;
-  padding: 40px 100px;
+  padding: 2vh 8vw 0vh 8vw;
   z-index: 10;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 header.sticky {
-  padding: 20px 100px;
-  background: #fff;
+  padding: 4vh 8vw;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 9vh;
 }
 header.sticky ul li a {
-  color: #000;
+  color: #DDD3CA;
 }
 header.sticky .logo {
-  color: #000;
+  color: #DDD3CA;
 }
 header .logo {
+  font-family: "Bilqo";
   position: relative;
-  font-weight: 700;
-  color: #FFF;
+  font-weight: normal;
+  color: #DDD3CA;
   text-decoration: none;
-  font-size: 2em;
+  font-size: 3em;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 0.6s;
@@ -120,32 +168,213 @@ header ul li {
   list-style: none;
 }
 header ul li a {
+  font-size: 26px;
+  font-family: "Mango";
+  font-weight: bold;
   position: relative;
   margin: 0 15px;
   text-decoration: none;
-  color: #fff;
+  color: #DDD3CA;
   letter-spacing: 2px;
-  font-weight: 500px;
   transition: 0.6s;
 }
 
 .banner {
   position: relative;
+  width: 100vw;
+  height: 0vh;
+}
+
+.BoxItem2 {
+  background-image: url("../Resources/BackGrounds/Teatru-pagina principala.png");
+  background-size: cover;
+  display: flex;
+}
+.BoxItem2 #Svg1 {
+  top: 0%;
+}
+.BoxItem2__btn {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 50%;
+  z-index: 100;
+}
+.BoxItem2__btn.btn--left {
+  left: 2%;
+}
+.BoxItem2__btn.btn--right {
+  right: 2%;
+}
+.BoxItem2__btn .icon {
   width: 100%;
-  height: 13vh;
+  height: 100%;
+}
+.BoxItem2__btn .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+  border: none;
+}
+
+@font-face {
+  font-family: "Mango";
+  src: url(../Resources/Fonts/Mango.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Bilqo";
+  src: url(../Resources/Fonts/Billqo.otf) format("truetype");
+}
+.leftSlider {
+  position: absolute;
+  z-index: 10000;
+  width: 27vw;
+  height: 100vh;
+  background-color: #462e25;
+  opacity: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.leftSlider img {
+  width: 100%;
+}
+.leftSlider .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.leftSlider p {
+  margin-left: 4%;
+  color: white;
+}
+.leftSlider p#name {
+  margin: 0 4%;
+  width: bold;
+  font-size: 3em;
+}
+.leftSlider p#author {
+  font-size: 1.5em;
+}
+.leftSlider p#noEvents {
+  margin-top: -10%;
+  margin-left: 10%;
+  margin-bottom: -35%;
+  width: 100%;
+  color: black;
+  font-size: 27vw;
+  font-family: "Bilqo";
+}
+.leftSlider p#noEventsText {
+  margin-left: 12%;
+  color: #896B60;
+  font-size: 2.5vw;
+}
+.leftSlider p#adress {
+  font-size: 1.1em;
+}
+.leftSlider p#info {
+  font-size: 1.1em;
+  margin-right: 4%;
+  text-align: justify;
+  margin-bottom: 2%;
+}
+.leftSlider .rating {
+  display: flex;
+}
+.leftSlider .rating p {
+  color: white;
+  font-family: "Bilqo";
+  font-style: italic;
+  margin: 1vw;
+  font-size: 1.5em;
+}
+.leftSlider .rating p#markNumber {
+  margin-left: 0vw;
+  font-style: normal;
+}
+.leftSlider #exit img {
+  margin-top: 2%;
+  margin-left: 5%;
+  width: 4vw;
+  height: 4vw;
+  margin-bottom: 3%;
+}
+.leftSlider .save {
+  margin-right: 4%;
+}
+.leftSlider .save img {
+  margin-top: 2%;
+  margin-left: 5%;
+  width: 4vw;
+  height: 4vw;
+}
+.leftSlider .edit#exit {
+  position: absolute;
+}
+.leftSlider .edit#exit img {
+  position: absolute;
+  margin-top: 2%;
+  margin-left: 5%;
+  width: 4vw;
+  height: 4vw;
+  bottom: 0;
+}
+
+.events {
+  z-index: 1000000;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100vw;
   font-family: "Montserrat", sans-serif;
 }
 
 body {
+  position: relative;
   min-height: 100vh;
   background: burlywood;
-  background-image: linear-gradient(45deg, rgba(254, 246, 210, 0.53) 0%, rgba(254, 246, 210, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 71.43%, rgba(90, 214, 242, 0.53) 71.43%, rgba(90, 214, 242, 0.53) 85.716%, rgba(57, 207, 248, 0.53) 85.716%, rgba(57, 207, 248, 0.53) 100.002%), linear-gradient(135deg, #f663c8 0%, #f663c8 12.5%, #df62c4 12.5%, #df62c4 25%, #c761c0 25%, #c761c0 37.5%, #b060bc 37.5%, #b060bc 50%, #985fb8 50%, #985fb8 62.5%, #815eb4 62.5%, #815eb4 75%, #695db0 75%, #695db0 87.5%, #525cac 87.5%, #525cac 100%);
+  background-image: url("../Resources/BackGrounds/BackGround.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  overflow: hidden;
+}
+
+.box {
+  height: 100vh;
+  width: 100%;
+  border-color: black;
+  border-width: 1px;
+  border-style: dashed;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: auto;
+  overflow-x: hidden;
+}
+
+.box::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  height: 100%;
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+.date {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

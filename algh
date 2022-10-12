@@ -1,0 +1,53 @@
+ // localmm = '';
+            // localyyyy= '';
+            // localdd = '';
+
+            // idItem = element.currentTarget.id.substring(4,6);
+            // dayElement = element.currentTarget.innerText; //Gets the text from the element
+            // weekDayElement = new Date(yyyy,mm-1,element.currentTarget.innerText).getDay();
+
+            // leftMonday = FirstMondayOfMonth(dayElement,weekDayElement);
+            // for(let i =0;i<42;i++){
+            //     if(parseInt(leftMonday)+parseInt(idItem)<=0){ //valorile din luna precedenta
+            //             localmm = mm-1;
+            //             localyyyy = yyyy;
+            //             if(localmm == 0){
+            //                 localmm = 12;
+            //                 localyyyy = yyyy-1;
+            //             }
+            //             localdd = parseInt(leftMonday)+parseInt(idItem)+parseInt(daysInMonth(mm-1,yyyy));
+                        
+        
+            //         }else if(parseInt(leftMonday)+parseInt(idItem)<=daysInMonth(mm,yyyy)){  //valorile din luna curenta
+                        
+            //             localmm = mm;
+            //             localyyyy = yyyy;
+            //             localdd = parseInt(leftMonday)+parseInt(idItem); // parseInt(leftMonday)+parseInt(idItem) = >ziua curenta
+                        
+        
+            //         }else if(parseInt(leftMonday)+parseInt(idItem)>daysInMonth(mm,yyyy)){  //valorile din luna urmatoare
+                        
+            //             localmm = mm+1;
+            //             localyyyy = yyyy;
+            //             if( localmm == 13 ){
+            //                 localmm = 1
+            //                 localyyyy = yyyy + 1 ;
+            //             }
+            //             localdd = parseInt(leftMonday)+parseInt(idItem)-parseInt(daysInMonth(mm,yyyy));
+                        
+            //         }
+            // }
+            
+            // console.log(" month " + localmm + " day " + localdd+ " year "+localyyyy)
+
+            // console.log("texts")
+            //     $.ajax({
+            //         type: "GET",
+            //         url: "./include/leftSlider.php",
+            //         dataType: "html",
+            //         data: { day: localdd, month: localmm, year: localyyyy },
+            //         success: function (data){
+            //             console.log(data);
+            //             console.log("texts")
+            //         }
+            // })

@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "Mango";
+  src: url(../Resources/Fonts/Mango.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Bilqo";
+  src: url(../Resources/Fonts/Billqo.otf) format("truetype");
+}
+body {
+  background-image: url(../Resources/BackGrounds/pagina_utilizator2.png);
+  background-size: 100vw 100vh;
+  overflow-x: hidden;
+  font-family: "Mango";
+  padding: 0;
+}
+
+header {
+  width: 100vw;
+  height: 13vh;
+  padding-left: 5em;
+  padding-top: 4em;
+}
+header .logo {
+  position: relative;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+header .logo small {
+  font-size: 1.2em;
+  font-weight: 100;
+  font-family: "Bilqo";
+}
+header .logo small a {
+  text-decoration: none;
+  color: #DDD3CA;
+}
+
+.error-msg {
+  text-align: center;
+  font-size: 2.3em;
+  color: red;
+}
+
+.login {
+  margin: 0 35vw;
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: column;
+}
+.login small {
+  text-align: center;
+  margin-top: -0.2em;
+  font-size: 4em;
+  font-family: "Mango";
+  color: #DDD3CA;
+}
+.login small:nth-child(1) {
+  text-align: center;
+  font-size: 7em;
+  align-items: center;
+  font-weight: 700;
+}
+.login small:nth-child(2) {
+  margin-top: -0.5em;
+  margin-bottom: 0.25em;
+}
+.login small#register {
+  margin-top: 0.5em;
+  font-size: 2.3em;
+}
+.login small#register a {
+  text-decoration: none;
+  color: #fa7307;
+}
+.login input {
+  background: rgba(250, 115, 7, 0) !important;
+  padding-left: 12px;
+  border-radius: 12px;
+  border-style: solid;
+  border-color: #DDD3CA;
+  margin: 0.3em;
+  color: #DDD3CA;
+  outline: none;
+  box-shadow: none;
+  font-family: "Mango";
+  font-size: 2.5em;
+}
+.login input:focus::placeholder {
+  color: transparent;
+}
+.login input::placeholder {
+  color: #DDD3CA;
+  transition: color 0.3 ease;
+  margin-left: 0.4em;
+  padding: 6px 0;
+}
+.login input[type=submit] {
+  margin-top: 1em;
+  margin-bottom: -0.3em;
+  color: #fa7307;
+  font-weight: bold;
+  border-color: #fa7307;
+}
+
+/*# sourceMappingURL=login_form.css.map */

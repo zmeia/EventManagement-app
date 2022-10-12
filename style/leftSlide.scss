@@ -1,0 +1,106 @@
+.leftSlider{
+    position: absolute;
+    z-index: 10000;
+    width: 27vw;
+    height: 100vh;
+    background-color: #462e25;
+    opacity: 1;
+    overflow-y:auto;
+    overflow-x:hidden ;
+        
+    img{
+        width: 100%;
+    }
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+    }
+    p{
+        margin-left: 4%;
+        color: white;
+        &#name{
+            margin: 0 4%;
+            width: bold;
+            font-size: 3em;
+        }
+        &#author{
+            
+            font-size: 1.5em;
+        }
+        &#noEvents{
+            margin-top: -10%;
+            margin-left: 10%;
+            margin-bottom: -35%;
+            width: 100%;
+            color: black;
+            font-size: 27vw;
+            font-family: "Bilqo";
+        }
+        &#noEventsText{
+            margin-left: 12%;
+            color: #896B60;
+            font-size: 2.5vw;
+        }
+        &#adress{
+            font-size: 1.1em;
+        }
+        &#info{
+            font-size: 1.1em;
+            margin-right: 4%;
+            text-align: justify;
+            margin-bottom: 2%;
+        }
+
+    }
+    .rating{
+        display: flex;
+        p{
+            color: white;
+            font-family: "Bilqo";
+            font-style: italic;
+            margin: 1vw;
+            font-size: 1.5em;
+            
+            &#markNumber{
+                margin-left: 0vw;
+                font-style: normal;
+            }
+        }
+    }
+    #exit{
+        img{
+            margin-top: 2%;
+            margin-left: 5%;
+            width: 4vw;
+            height: 4vw;
+            margin-bottom: 3%;
+        }
+    }
+    .save{
+        margin-right: 4%;
+        img{
+            margin-top: 2%;
+            margin-left: 5%;
+            width: 4vw;
+            height: 4vw;
+            
+        }
+            
+    }
+    .edit#exit{
+        position: absolute;
+        img{
+            position:absolute;
+            margin-top: 2%;
+            margin-left: 5%;
+            width: 4vw;
+            height: 4vw;
+            bottom: 0;
+        }
+    }
+    
+}
+
+.events{
+    z-index: 1000000;
+}

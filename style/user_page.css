@@ -1,0 +1,204 @@
+@font-face {
+  font-family: "Mango";
+  src: url(../Resources/Fonts/Mango.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Bilqo";
+  src: url(../Resources/Fonts/Billqo.otf) format("truetype");
+}
+body {
+  background-image: url(../Resources/BackGrounds/pagina_utilizator.png);
+  background-size: 100vw 100vh;
+  margin: 0;
+  font-family: "Mango";
+  padding: 0;
+  overflow: hidden;
+}
+
+header {
+  width: 100vw;
+  height: 13vh;
+  padding-left: 1vw;
+}
+header .logo {
+  position: relative;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+header .logo p {
+  margin-left: 7vw;
+  margin-top: 4vw;
+  font-size: 52px;
+  font-weight: 100;
+  font-family: "Bilqo";
+}
+header .logo p a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  display: flex;
+}
+.container .profile {
+  width: 40vw;
+  padding-left: 1.5vw;
+}
+.container .profile .manage_profile {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8vw;
+  font-family: "Mango";
+}
+.container .profile .manage_profile a {
+  text-decoration: none;
+  opacity: 0.5;
+  color: black;
+  font-weight: bold;
+  font-size: 52px;
+  margin-top: -1.5vh;
+  padding: 0;
+}
+.container .profile .manage_profile #profil {
+  opacity: 1;
+}
+.container .profile .manage_profile h1 {
+  margin-top: -4vh;
+  font-weight: bold;
+  font-size: 62px;
+  margin-bottom: 2vh;
+}
+.container .edit_profile {
+  width: 45vw;
+}
+.container .edit_profile .svg_log_out {
+  position: relative;
+  right: 0;
+}
+.container .edit_profile h1 {
+  margin-top: 0vh;
+  font-size: 2.7em;
+  margin-bottom: 0vh;
+}
+.container .edit_profile .line {
+  margin-left: -4vw;
+}
+.container .edit_profile .edit_photo {
+  display: flex;
+  justify-content: space-between;
+}
+.container .edit_profile .buttons {
+  margin-top: 1.5vh;
+  display: flex;
+}
+.container .edit_profile .buttons .photoButton {
+  width: 10vw;
+  height: 6vh;
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+}
+.container .edit_profile .buttons .changePhoto {
+  cursor: pointer;
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background: #00f;
+  z-index: 999;
+}
+.container .edit_profile .buttons .icons {
+  margin-top: 4%;
+  width: 22%;
+  height: 70%;
+  z-index: 10000;
+}
+.container .edit_profile .buttons .changePhoto {
+  margin-right: 2.5vw;
+}
+.container .edit_profile .buttons .deletePhoto {
+  margin-left: 2.5vw;
+}
+.container .edit_profile .button {
+  font-family: "Mango";
+  padding: 0px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2.5em;
+  margin: 1vh 2px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  border: 3px solid black;
+  border-radius: 3vw;
+  width: 13vw;
+  height: 6.5vh;
+}
+.container .edit_profile hr.divideLine:nth-of-type(1) {
+  margin-top: 3vh;
+  opacity: 0.5;
+}
+.container .edit_profile hr.divideLine:first-child {
+  margin-top: 0vh;
+  opacity: 0.5;
+}
+.container .edit_profile hr.divideLine {
+  margin-top: 0vh;
+  opacity: 0.5;
+}
+.container .edit_profile .field {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.container .edit_profile .field .actual {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.container .edit_profile .field .actual small {
+  font-weight: bold;
+  font-size: 2.5em;
+}
+.container .edit_profile .field .actual .fieldValue {
+  font-weight: 500;
+}
+.container .edit_profile .field .name, .container .edit_profile .field .email, .container .edit_profile .field .phone {
+  width: 8vw;
+}
+
+.photo {
+  margin-top: -0.5vh;
+  padding-left: 5.5vw;
+}
+
+.form__edit {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.form__edit input[type=submit] {
+  width: 8vw !important;
+}
+.form__edit input[type=text], .form__edit [type=email] {
+  background: none;
+  border-style: solid;
+  border-color: black;
+  color: black;
+  outline: none;
+  box-shadow: none;
+  font-family: "Mango";
+  border-radius: 12px;
+  font-size: 2em;
+  height: 1.5em;
+  margin: -0.1em 1em 0.2em 0;
+}
+
+/*# sourceMappingURL=user_page.css.map */
