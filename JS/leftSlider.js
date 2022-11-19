@@ -1,12 +1,12 @@
-var childArr = document.getElementById("container");
+let childArr = document.getElementById("container");
 
-var leftSlider = document.querySelector(".BoxItem1");
+let leftSlider = document.querySelector(".BoxItem1");
 
 
 let state = 0;
 
 function getDateAjax(day,month,year){
-var $result = '';
+    let $result = '';
 $.ajax({
             type: "GET",
             async:false,
@@ -21,7 +21,7 @@ return $result;
 }
 
 function getEventAjax(day,month,year){
-    var $result = '';
+    let $result = '';
     $.ajax({
                 type: "GET",
                 async:false,
@@ -36,7 +36,7 @@ function getEventAjax(day,month,year){
 }
 
 function saveAjax(id){
-    var $result = '';
+    let $result = '';
     $.ajax({
                 type: "GET",
                 async: false,
@@ -90,10 +90,10 @@ function addNewEvent(){
     $id = $arrAjax[10];
 
 
-    var newElement = document.createElement("div");
+    let newElement = document.createElement("div");
     newElement.className = "leftSlider events";
     
-    var img = $('<img />', { 
+    let img = $('<img />', { 
         id: 'Myid',
         src: $arrAjax[5],
         alt: 'MyAlt'
@@ -103,43 +103,43 @@ function addNewEvent(){
 
     
 
-    var sliderName = document.createElement("p");
+    let sliderName = document.createElement("p");
     sliderName.innerHTML= "<b><i>"+$name+"</i></b>";
     sliderName.setAttribute("id","name");
     $(newElement).append(sliderName)
 
-    var sliderAuthor = document.createElement("p");
+    let sliderAuthor = document.createElement("p");
     sliderAuthor.innerHTML= " de "+$author;
     sliderAuthor.setAttribute("id","author");
     $(newElement).append(sliderAuthor)
     
-    var rating = document.createElement("div");
+    let rating = document.createElement("div");
     rating.className = "rating";
     $(newElement).append(rating);
 
-    var sliderMark = document.createElement("p");
+    let sliderMark = document.createElement("p");
     sliderMark.innerHTML= " Nota specatacolului: "+ $mark +" din 5";
     sliderMark.id = "mark";
     $(rating).append(sliderMark);
 
-    var sliderAddress = document.createElement("p");
+    let sliderAddress = document.createElement("p");
     sliderAddress.innerHTML= " <i> Adresa unde va avea loc evenimentul: </i> <br>"+ $adress + "<br> <br>";
     sliderAddress.id = "adress";
     $(newElement).append(sliderAddress);
 
-    var sliderInfo = document.createElement("p");
+    let sliderInfo = document.createElement("p");
     sliderInfo.innerHTML= "<i> Informatii despre spectacol:<br> </i>" + $info;
     sliderInfo.id = "info";
     $(newElement).append(sliderInfo);
 
-    var buttons = document.createElement("div");
+    let buttons = document.createElement("div");
     buttons.className = "buttons";
 
-    var exitButton = document.createElement("button");
+    let exitButton = document.createElement("button");
     exitButton.id = 'exit';
     exitButton.innerHTML= "<img src = './Resources/BackGrounds/closeButton.png' ></img>";
 
-    var saveButton = document.createElement("button");
+    let saveButton = document.createElement("button");
     saveButton.innerHTML= "<img src = './Resources/BackGrounds/empty_h.png' ></img>";
     saveButton.className = "save";
 
@@ -169,20 +169,20 @@ function addNewEvent(){
     
     $(childArr).children(".day").on("click", (element) => {  
 
-                var newElement = document.createElement("div");
+        let newElement = document.createElement("div");
                 newElement.className = "leftSlider";
                 
-                var noEvents = document.createElement("p");
+                let noEvents = document.createElement("p");
                 noEvents.id = "noEvents";
                 noEvents.innerHTML = "X";
                 $(newElement).append(noEvents);
 
-                var noEventsText = document.createElement("p");
+                let noEventsText = document.createElement("p");
                 noEventsText.id = "noEventsText";
                 noEventsText.innerHTML = "Nici un eveniment";
                 $(newElement).append(noEventsText);
 
-                var exitButton = document.createElement("button");
+                let exitButton = document.createElement("button");
                 exitButton.id = 'exit';
                 exitButton.innerHTML= "<img src = './Resources/BackGrounds/closeButton.png' ></img>";
 

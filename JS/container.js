@@ -3,24 +3,24 @@
     "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie", "Ianuarie"
     ];
 
-    var gradient = "repeating-linear-gradient(135deg, rgb(169,105,44) 0px, rgb(169,105,44) 23px,rgb(113,70,29) 23px, rgb(113,70,29) 55px,rgb(213,137,71) 55px, rgb(213,137,71) 63px)";
+    let gradient = "repeating-linear-gradient(135deg, rgb(169,105,44) 0px, rgb(169,105,44) 23px,rgb(113,70,29) 23px, rgb(113,70,29) 55px,rgb(213,137,71) 55px, rgb(213,137,71) 63px)";
 
-    var today = new Date();
+    let today = new Date();
     console.log(today);
-    var dd = String(today.getDate()).padStart(2, '0');
+    let dd = String(today.getDate()).padStart(2, '0');
     console.log(dd);
-    var curent = new Date(2022,03,08).getDay();//gets the day of the week
+    let curent = new Date(2022,03,08).getDay();//gets the day of the week
     console.log("Current day of the week "+curent);
 
 
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     mm=parseInt(mm);//Date as Integer (actual month)
     console.log("something "+mm);
     
-    var initialMonth = mm;
-    var yyyy = today.getFullYear();
+    let initialMonth = mm;
+    let yyyy = today.getFullYear();
     
-    var initialYear = yyyy;
+    let initialYear = yyyy;
     
 
     today = dd + '/' + mm + '/' + yyyy;
@@ -33,7 +33,7 @@
 
     $(".slider div.Next").append("<p id=\"Next\">"+ monthNames[mm+1] +"</p>");
 
-    var Monday;  
+    let Monday;  
     
     function FirstMondayOfMonth(dayOfMonth,dayOfWeek){
         Day=dayOfMonth-dayOfWeek+1
@@ -50,12 +50,12 @@
         return new Date(year, month, 0).getDate();
     }
     //block for days of the week
-    var DateArr = ['Luni','Marți','Miercuri','Joi','Vineri','Sambătă','Duminică']
-    var prevMonday;
+    let DateArr = ['Luni','Marți','Miercuri','Joi','Vineri','Sambătă','Duminică']
+    let prevMonday;
     $(function(){
 
     
-    var Monday = FirstMondayOfMonth(dd,curent);
+        let Monday = FirstMondayOfMonth(dd,curent);
     prevMonday=Monday;
     /*
     <svg width="4000" height="180">
@@ -119,7 +119,7 @@
 
     function UpdateCalendar(Month,Year,dayOfMonth,dayOfWeek){
         $("#Item"+(parseInt(dd)+Math.abs(prevMonday))).css("background-image","none");
-        var Monday = FirstMondayOfMonth(dayOfMonth,dayOfWeek);
+        let Monday = FirstMondayOfMonth(dayOfMonth,dayOfWeek);
         prevMonday=Monday;
         for(let i = Monday,counter=0 ; i < 42+ Monday;i++,counter++){
             $("#Item"+counter).css(" border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; border: 0.1px solid white; background-color: transparent;");
